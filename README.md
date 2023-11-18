@@ -1,1 +1,15 @@
-# RoadSignsDetection
+# Road sign detector
+
+Эксперименты:
+
+| Модель  | Датасет                                           | Параметры                    | Метрики         |
+|---------|---------------------------------------------------|------------------------------|---------------------------|
+| yolov8s | Russian traffic sign images (20k train,4k valid)  | imgsz=1280,epochs=25,batch=4 | mAP50=0.46, mAP50-95=0.35 |
+| yolov8s | Traffic Signs Dataset in YOLO format (4 classes)  | imgsz=1280,epochs=25,batch=4 | mAP50=0.99, mAP50-95=0.87 |
+| yolov8s | Russian traffic sign images (179k,40 top classes) | imgsz=640,epochs=20,batch=64 | mAP50=0.47, mAP50-95=0.49 |
+| yolov8m | Russian traffic sign images (179k,40 top classes) | imgsz=640,epochs=5,batch=32  | tbd                       |
+
+## Датасеты:
+
+* https://www.kaggle.com/datasets/watchman/rtsd-dataset/data
+* https://www.kaggle.com/datasets/valentynsichkar/traffic-signs-dataset-in-yolo-format/data

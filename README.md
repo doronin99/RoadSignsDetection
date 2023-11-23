@@ -8,7 +8,9 @@
 6. Обучение модели.
 7. Создание приложения для получения предсказаний модели на видео.
 
-
+Было обученно две модели: 
+1. 8 классов по типам дорожных знаков - [Демонстрация](https://drive.google.com/file/d/18FAGUMIgEBnvvCulXudQmK7Wq9uU_twI/view?usp=drive_link)
+2. 29 классов для детекции 29 различных дорожных знаков - [Демонстрация](https://drive.google.com/file/d/12SndJXBaDCoJYB-sJqZxPP2ucQKplaSJ/view?usp=drive_link)
 
 ## Эксперименты:
 

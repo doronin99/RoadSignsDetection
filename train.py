@@ -1,14 +1,18 @@
 from ultralytics import YOLO
  
-# Load the model.
-model = YOLO('yolov8m.pt')
- 
-# Training.
+model = YOLO('yolov8s.pt')
+
 results = model.train(
-   data='trafic_sign_40.yaml',
+   data='data.yaml',
    seed=42,
    imgsz=640,
-   epochs=5,
+   epochs=100,
    batch=8,
    optimizer='AdamW',
-   name='yolov8m_40cls_5epochs')
+   name='yolov8s_24classes_2',
+   mosaic=0,
+   hsv_h=0.015,
+   hsv_s=0.7,
+   hsv_v=0.4,
+   degrees=10.0,
+   scale=0.7)

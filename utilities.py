@@ -1,8 +1,7 @@
-import os
-import random
 import json
-import yaml
+import random
 import shutil
+import yaml
 from collections import defaultdict
 from glob import glob
 

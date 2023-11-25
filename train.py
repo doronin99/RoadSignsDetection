@@ -15,4 +15,5 @@ results = model.train(
    hsv_s=0.7,
    hsv_v=0.4,
    degrees=10.0,
-   scale=0.7)
+   scale=0.7
+)

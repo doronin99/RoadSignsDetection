@@ -32,5 +32,5 @@
 ## Запуск
 
 1. `cd server && python main.py`
-2. `cd ../app && python -m streamlit run .\app.py`
+2. `cd ..\app && python -m streamlit run .\app.py`
 3. Сервис доступен по адресу `http://localhost:8501`

@@ -34,3 +34,6 @@
 1. `cd server && python main.py`
 2. `cd ..\app && python -m streamlit run .\app.py`
 3. Сервис доступен по адресу `http://localhost:8501`
+
+## [Демо](https://drive.google.com/file/d/1wNvuS2sbH6FceSxYvt6IGAZ6S48bCynD/view?usp=sharing)
+

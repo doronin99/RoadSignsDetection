@@ -28,3 +28,9 @@
 
 * https://www.kaggle.com/datasets/watchman/rtsd-dataset/data
 * https://www.kaggle.com/datasets/valentynsichkar/traffic-signs-dataset-in-yolo-format/data
+
+## Запуск
+
+1. `cd server && python main.py`
+2. `cd ../app && python -m streamlit run .\app.py`
+3. Сервис доступен по адресу `http://localhost:8501`

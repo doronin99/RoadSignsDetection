@@ -17,7 +17,7 @@ import hashlib
 async def lifespan(app: FastAPI):
     # Load the ML model
     global model
-    model = YOLO('../models/best_multi.pt')
+    model = YOLO('../models/best8class60epochs_renamed.pt')
 
     global input_dir
     input_dir = "../input"
@@ -67,7 +67,7 @@ async def predict(request: Request):
             break
         
         if cap.get(cv2.CAP_PROP_POS_FRAMES) % frames_to_skip == 0:
-            results = model(frame, verbose=False)
+            results = model(frame, verbose=False, conf=0.5)
             annotated_frame = results[0].plot()
             out.write(annotated_frame)
         

@@ -3,7 +3,7 @@ import os
 import requests
 
 
-def save_video(video_file_name, video_file, input_dir = "../input"):
+def save_video(video_file_name, video_file, input_dir="../input"):
     with open(os.path.join(input_dir, video_file_name), "wb") as f:
         f.write(video_file.read())
     return os.path.join(input_dir, video_file_name), video_file_name
@@ -11,9 +11,8 @@ def save_video(video_file_name, video_file, input_dir = "../input"):
 
 def process_video(video_name: str, server_url: str = "http://localhost:8080/predict"):
     data = {"video_name": video_name}
-    return requests.post(
-        server_url, json=data, timeout=8000
-    )
+    return requests.post(server_url, json=data, timeout=8000)
+
 
 def main():
     st.title("Road Signs Detector")
@@ -39,7 +38,7 @@ def main():
                 with st.spinner(f"Processing video..."):
                     response = process_video(object_name)
                     print(response)
-                    if response.headers['success'] == "True":
+                    if response.headers["success"] == "True":
                         st.write("Processed video is shown below")
 
                         st_video = open(os.path.join("../output", object_name), "rb")
@@ -49,7 +48,7 @@ def main():
                         st.write("Error while processing video")
 
     st.markdown(
-            """
+        """
             ## Instructions:
             1. Upload a video file in MP4 format using the file uploader.
             2. The model will process the video and annotate road signs.
@@ -59,7 +58,8 @@ def main():
             - The processed video will be displayed below.
             - Annotated road signs will be highlighted in the video.
             """
-        )
+    )
+
 
 if __name__ == "__main__":
     main()

@@ -3,14 +3,12 @@ import os
 from ultralytics import YOLO
 from contextlib import asynccontextmanager
 import uvicorn
-from fastapi import FastAPI, APIRouter
-from fastapi.openapi.utils import get_openapi
+from fastapi import FastAPI
 from starlette.requests import Request
 from starlette.responses import Response
 import cv2
 from tqdm import tqdm
 import shutil
-import hashlib
 
 
 @asynccontextmanager

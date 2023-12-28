@@ -22,7 +22,7 @@
 Было обученно две модели: 
 1. 8 классов по типам дорожных знаков - [Демонстрация](https://drive.google.com/file/d/18FAGUMIgEBnvvCulXudQmK7Wq9uU_twI/view?usp=drive_link)
 2. 29 классов для детекции 29 различных дорожных знаков - [Демонстрация](https://drive.google.com/file/d/12SndJXBaDCoJYB-sJqZxPP2ucQKplaSJ/view?usp=drive_link)
-   Выбор 29 классов обусловлен представленностью классов в датасете для обучения модели. Классы, которые представлены слишком малым количеством изображений (< 700) были отфильтрованы
+   Выбор 29 классов обусловлен представленностью классов в датасете для обучения модели. Классы, которые представлены слишком малым количеством изображений (< 700) были отфильтрованы. [Эксперимент](https://app.clear.ml/projects/bcd52c2ceb124583a78957ee167e139b/experiments/471243173d4e4352a227c9810a8c92fb/output/execution) без удаления низкочастотных классов привел к снижению целевых метрик 
 
 Линтер: **black**
 ## Эксперименты:
@@ -41,7 +41,7 @@
 | yolov8n | Russian traffic sign images (179k,29 classes)     | imgsz=640, epochs=100, batch=8, optimizer='AdamW' + albumentations | mAP50=0.872, mAP50-95=0.614 |
 
 ## Трекинг экспериментов:
-Для трекинга экспериментов использовался ClearML.
+Для трекинга экспериментов использовался ClearML. [Результаты обучения лучшей модели](https://app.clear.ml/projects/bcd52c2ceb124583a78957ee167e139b/experiments/9cc4f65969eb45ed9ff727f6acadc80c/output/execution)
 
 ## Аугментации:
 SafeRotate, RandomBrightness, Blur, RandomCrop
@@ -62,7 +62,8 @@ SafeRotate, RandomBrightness, Blur, RandomCrop
 ## Оценка решения:
 Решение верно детектирует знаки дорожного движения, скорость работы подходит для реализации приложений на портативных устройствах. Возможно улучшение решения путем увеличения количества эпох обучения и выбора модели большего размера.
 
-## График обучения лучшй модели:
+## График обучения лучшей модели:
+
 [![results-plot-image.png](https://i.postimg.cc/d1GwGLzT/results-plot-image.png)](https://postimg.cc/JD7fL471)
 
 ## Датасеты:
